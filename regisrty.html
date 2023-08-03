@@ -50,7 +50,7 @@
     </header>
 
 
-    <nav class="center_content_product_registry center">
+    <nav class=" center center_content_product_registry">
         <div class="top_content_product_cart">
             <div class="top_left_cart">
                 <nav class="top_left_text">
@@ -62,21 +62,22 @@
         </div>
     </nav>
 
+    <!-- <div class="registry_body_center"></div> -->
 
-    <main class="">
-        <section class="body_registry center form_registry">
+    <main class="center">
+        <section class="form_registry">
             <figure class="new_user">
                 <form action="" method="post" class="new_user__data">
                     <p class="new_user__title_form">Your Name</p>
-                    <input class="new_user__input_info new_user__input_firstname" type="text" name="name_new_user" id="name_user" placeholder="First Name" required>
-                    <input class="new_user__input_info new_user__input_lastname" type="text" name="lastname_new_user" id="lastname_user" placeholder="Last Name" required>
+                    <input class="new_user__input_info new_user__input_firstname" type="text" name="name_new_user" id="name_user" placeholder="First Name" autofocus minlength="2" maxlength="30" required>
+                    <input class="new_user__input_info new_user__input_lastname" type="text" name="lastname_new_user" id="lastname_user" placeholder="Last Name" minlength="2" maxlength="30" required>
                     <div class="new_user__check_gender">
                         <input type="radio" name="gender" id="male" value="Male" checked><span class="new_user__gender" >Male</span>
                         <input type="radio" name="gender" id="female" aria-checked="true" value="Female"><span class="new_user__gender">Female</span>
                     </div>
                     <p class="new_user__login_details">Login details</p>
                     <input class="new_user__input_info new_user__input_email" type="email" name="new_user__email_registry" id="email_new" placeholder="Email" required>
-                    <input class="new_user__input_info new_user__input_password" type="password" name="new_user_pass" id="pass_new" placeholder="Password" required>
+                    <input class="new_user__input_info new_user__input_password" type="password" name="new_user_pass" id="pass_new" placeholder="Password" minlength="8" required>
                     <p class="new_user__password_info">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
                     <button class="new_user__button_submit" type="submit"><p class="new_user__button_submit_text">JOIN NOW</p><span><svg class="new_user__button_submit_arrow" xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -85,7 +86,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z"
                             fill="white" />
-                    </svg></span></button>
+                    </svg></span><div class="new_user__mask_submit"></div></button>
                 </form>
             </figure>
             <figure class="info">
@@ -128,14 +129,13 @@
         <div class="center_content">
             <div class="background_pictures">
                 <div class="background_rgba">
-                    <div class="left_picture_content center">
+                    <div class="left_picture_content">
                         <div class="face_woman">
                             <img src="img/footer/Intersect.svg" alt="face_baby">
                         </div>
                         <div class="woman_text">
-                            <p class="comment_woman">&laquo;Vestibulum quis porttitor dui! Quisque<br>viverra
-                                nunc&nbsp;mi,
-                                a&nbsp;pulvinar purus<br>condimentum&raquo;
+                            <p class="comment_woman">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
+                            a&nbsp;pulvinar purus condimentum&raquo;
                             </p>
                         </div>
                     </div>

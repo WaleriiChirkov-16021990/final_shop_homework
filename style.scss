@@ -412,7 +412,7 @@ body {
   height: 250px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-around;
+  align-items: center;
   justify-content: center;
 }
 
@@ -1797,23 +1797,17 @@ line-height: normal;
   align-items: center;
   background-color: #f1e4e6;
 }
-
-.body_registry{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .form_registry{
   display: flex;
   justify-content: space-between;
+  align-items: start;
   height: 675px;
   padding: 64px 0px 96px;
   width: 100vw;
   max-width: 1140px;
 
   .new_user {
-    display: block;
+    display: flex;
     &__data {
       display: flex;
       flex-direction: column;
@@ -1909,6 +1903,7 @@ line-height: normal;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      // position: relative;
 
       &_text{
         color: #FFF;
@@ -1918,15 +1913,35 @@ line-height: normal;
         font-weight: 400;
         line-height: normal;
       }
+
     }
+
+    //  &__button_submit:hover .new_user__mask_submit {
+    //   opacity: 1;
+    // }
+
+    // &__button_submit:hover {
+    //   border: #bc1888 1px solid;
+    // }
   }
 }
+
+// .new_user__mask_submit {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: rgba(252, 21, 21, 0.3);
+//   color: #FFF;
+//   opacity: 0;
+//   transition: opacity 0.4s linear;
+//  }
 
 .info{
   display: flex;
   width: 652px;
   height: 334px;
-  // flex-wrap: wrap;
   flex-direction: column;
 
   &__title{
@@ -1958,6 +1973,8 @@ line-height: normal;
     font-weight: 300;
     line-height: normal;
     margin-bottom: 16px;
+    gap: 23px;
+    align-items: baseline;
   }
 
   &_li_text{
@@ -2224,6 +2241,59 @@ media */
   catalog caput
   */
 
+
+  /*================================================================
+  registration
+  */
+
+.top_left_cart {
+  margin-left: 5%;
+}
+
+.form_registry {
+  justify-content: center;
+  gap: 23px;
+}
+
+.header {
+  width: 91vw;
+}
+
+
+.info {
+  width: 354px;
+
+  &__title {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &_benefit {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+}
+
+
+// registration caput
 
 
 
@@ -2722,6 +2792,179 @@ line-height: normal;
 // catalog_end
 
 
+/* =================================================================
+registration
+*/
 
+.top_content_product_cart{
+  justify-content: center;
+}
+
+
+.form_registry {
+  flex-direction: column;
+  min-width: 320px;
+  .new_user {
+
+
+    &__data {
+      display: flex;
+      flex-direction: column;
+      width: 314px;
+    }
+
+    &__input_info{
+      width: 314px;
+      height: 44px;
+      padding: 13px 17px 16px;
+      color: #B1B1B1;
+      font-family: Lato;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__title_form{
+      margin-bottom: 21px;
+
+      color: #222;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__input_firstname{
+      margin-bottom: 21px;
+    }
+
+    &__input_lastname{
+      margin-bottom: 31px;
+    }
+
+    &__check_gender {
+      margin-bottom: 33px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__gender{
+      margin-right: 20px;
+      margin-left: 10px;
+
+      color: #000;
+      font-family: Lato;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__login_details {
+      margin-bottom: 20px;
+
+      color: #222;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__input_email{
+      margin-bottom: 21px;
+    }
+
+    &__input_password{
+      margin-bottom: 16px;
+    }
+
+    &__password_info{
+      width: 314px;
+      margin-bottom: 39px;
+
+      color: #B1B1B1;
+      font-family: Lato;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__button_submit{
+      width: 167px;
+      height: 50px;
+      border: none;
+      background-color: #F16D7F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+
+      &_text{
+        color: #FFF;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+    }
+
+  }
+}
+
+
+
+.info{
+  display: flex;
+  width: 314px;
+  height: 334px;
+  flex-direction: column;
+
+  &__title{
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 22px;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 21px;
+  }
+
+  &_benefit{
+    display: flex;
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 16px;
+    gap: 23px;
+    align-items: baseline;
+  }
+
+  &_li_text{
+    margin-left: 23px;
+  }
+}
+
+
+  // registration caput
 
 }
