@@ -1533,7 +1533,6 @@ summary::-webkit-details-marker {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  height: 675px;
   padding: 64px 0px 96px;
   width: 100vw;
   max-width: 1140px;
@@ -2360,18 +2359,24 @@ media */
   */
   .top_content_product_cart {
     justify-content: center;
+    height: 148px;
   }
   .form_registry {
     flex-direction: column;
-    min-width: 320px;
+    min-width: 300px;
+    align-items: center;
+  }
+  .form_registry .new_user {
+    align-items: center;
+    justify-content: center;
   }
   .form_registry .new_user__data {
     display: flex;
     flex-direction: column;
-    width: 314px;
+    width: 318px;
   }
   .form_registry .new_user__input_info {
-    width: 314px;
+    width: 318px;
     height: 44px;
     padding: 13px 17px 16px;
     color: #B1B1B1;
@@ -2427,8 +2432,9 @@ media */
     margin-bottom: 16px;
   }
   .form_registry .new_user__password_info {
-    width: 314px;
+    width: 318px;
     margin-bottom: 39px;
+    flex-wrap: wrap;
     color: #B1B1B1;
     font-family: Lato;
     font-size: 13px;
@@ -2457,14 +2463,15 @@ media */
   }
   .info {
     display: flex;
-    width: 314px;
-    height: 334px;
+    width: 316px;
+    height: 337px;
     flex-direction: column;
+    padding: 0px 1px;
   }
   .info__title {
     color: #000;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -2473,17 +2480,17 @@ media */
   .info__description {
     color: #000;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
     margin-bottom: 21px;
   }
   .info_benefit {
+    font-size: 16px;
     display: flex;
     color: #000;
     font-family: Lato;
-    font-size: 24px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
