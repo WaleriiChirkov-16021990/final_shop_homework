@@ -94,6 +94,8 @@ a {
 body {
   display: flex;
   flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .top_left_photo {
@@ -412,7 +414,7 @@ body {
   height: 250px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-around;
+  align-items: center;
   justify-content: center;
 }
 
@@ -1012,14 +1014,14 @@ products */
 }
 
 .slide_product {
-  min-width: 1440px;
+  // min-width: 1440px;
   width: 100%;
   height: 777px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #F7F7F7;
-  padding: 11px 0px 44px 0px;
+  padding: 11px 5px 44px 0px;
   // position: absolute;
   margin-bottom: -80px;
   // margin-bottom: 665px;
@@ -1089,8 +1091,17 @@ line-height: normal;
   margin-top: 65px;
 }
 
+.add_product {
+  margin-bottom: 20px;
+}
+
+
 .horizontal_stripe_color {
   margin-bottom: 12px;
+}
+
+.horizontal__line {
+  width: 90%;
 }
 
 .title_discription_product {
@@ -1797,23 +1808,16 @@ line-height: normal;
   align-items: center;
   background-color: #f1e4e6;
 }
-
-.body_registry{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .form_registry{
   display: flex;
   justify-content: space-between;
-  height: 675px;
+  align-items: start;
   padding: 64px 0px 96px;
   width: 100vw;
   max-width: 1140px;
 
   .new_user {
-    display: block;
+    display: flex;
     &__data {
       display: flex;
       flex-direction: column;
@@ -1909,6 +1913,7 @@ line-height: normal;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      // position: relative;
 
       &_text{
         color: #FFF;
@@ -1918,15 +1923,35 @@ line-height: normal;
         font-weight: 400;
         line-height: normal;
       }
+
     }
+
+    //  &__button_submit:hover .new_user__mask_submit {
+    //   opacity: 1;
+    // }
+
+    // &__button_submit:hover {
+    //   border: #bc1888 1px solid;
+    // }
   }
 }
+
+// .new_user__mask_submit {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: rgba(252, 21, 21, 0.3);
+//   color: #FFF;
+//   opacity: 0;
+//   transition: opacity 0.4s linear;
+//  }
 
 .info{
   display: flex;
   width: 652px;
   height: 334px;
-  // flex-wrap: wrap;
   flex-direction: column;
 
   &__title{
@@ -1958,6 +1983,8 @@ line-height: normal;
     font-weight: 300;
     line-height: normal;
     margin-bottom: 16px;
+    gap: 23px;
+    align-items: baseline;
   }
 
   &_li_text{
@@ -2224,6 +2251,103 @@ media */
   catalog caput
   */
 
+
+  /*================================================================
+  registration
+  */
+
+.top_left_cart {
+  margin-left: 5%;
+}
+
+.form_registry {
+  justify-content: center;
+  gap: 23px;
+}
+
+.header {
+  width: 91vw;
+}
+
+
+.info {
+  width: 354px;
+
+  &__title {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  &_benefit {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+}
+
+
+// registration caput
+
+
+/* =================================================================
+products */
+
+
+// .slide_product {
+    // min-width: 768px;
+// }
+
+
+.low_grid_content_product {
+  grid-template-columns: repeat(2,360px);
+
+}
+
+.item_three {
+  display: none;
+}
+
+
+
+// products caput
+
+
+
+/* =================================================================
+
+registrations
+*/
+.cart_product_show {
+  flex-direction: column;
+  // width: 756px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart_product_making_a_purchase {
+  flex-direction: row;
+  height: 381px;
+  width: 750px;
+}
+
+// registration caput
 
 
 
@@ -2722,6 +2846,382 @@ line-height: normal;
 // catalog_end
 
 
+/* =================================================================
+registration
+*/
+
+.top_content_product_cart{
+  justify-content: center;
+  height: 148px;
+}
+
+
+.form_registry {
+  flex-direction: column;
+  min-width: 300px;
+  align-items: center;
+  .new_user {
+    align-items: center;
+    justify-content: center;
+
+    &__data {
+      display: flex;
+      flex-direction: column;
+      width: 318px;
+      padding: 0px 10px 0px;
+    }
+
+    &__input_info{
+      width: 300px;
+      height: 44px;
+      padding: 13px 17px 16px;
+      color: #B1B1B1;
+      font-family: Lato;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__title_form{
+      margin-bottom: 21px;
+
+      color: #222;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__input_firstname{
+      margin-bottom: 21px;
+    }
+
+    &__input_lastname{
+      margin-bottom: 31px;
+    }
+
+    &__check_gender {
+      margin-bottom: 33px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__gender{
+      margin-right: 20px;
+      margin-left: 10px;
+
+      color: #000;
+      font-family: Lato;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__login_details {
+      margin-bottom: 20px;
+
+      color: #222;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__input_email{
+      margin-bottom: 21px;
+    }
+
+    &__input_password{
+      margin-bottom: 16px;
+    }
+
+    &__password_info{
+      width: 300px;
+      margin-bottom: 39px;
+      flex-wrap: wrap;
+
+      color: #B1B1B1;
+      font-family: Lato;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__button_submit{
+      width: 167px;
+      height: 50px;
+      border: none;
+      background-color: #F16D7F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+
+      &_text{
+        color: #FFF;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+    }
+
+  }
+}
+
+
+
+.info{
+  display: flex;
+  width: 316px;
+  height: 337px;
+  flex-direction: column;
+  padding:0px 10px;
+
+  &__title{
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 22px;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 21px;
+  }
+
+  &_benefit{
+    font-size: 16px;
+    display: flex;
+    color: #000;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 16px;
+    gap: 23px;
+    align-items: baseline;
+  }
+
+  &_li_text{
+    margin-left: 23px;
+  }
+}
+
+
+  // registration caput
+
+
+.slide_product {
+  height: 454px;
+}
+
+.slider__image {
+  width: 250px;
+}
+
+.low_grid_content_product {
+  // width: 320px;
+    grid-template-columns: repeat(1, 320px);
+    grid-template-rows: repeat(2, 520px);
+}
+
+.discription_product {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+}
+
+.detailed_description {
+  width: 99%;
+  height: 454px;
+}
+
+.horizontal__line {
+  width: 310px;
+}
+
+
+.option1_product, .option2_product, .option3_product {
+  color: #6F6E6E;
+font-family: Lato;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+// product caput
+
+
+
+/* =================================================================
+
+registrations
+*/
+.cart_product_show {
+  flex-direction: column;
+  // width: 756px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart_product_proceed_to_checkout {
+  width: 320px;
+  margin-bottom: 96px;
+}
+
+.cart_product_making_a_purchase {
+  flex-direction: column;
+  height: auto;
+  width: 318px;
+}
+
+.cart_product_show {
+  width: 320px;
+}
+
+.title_discription_product {
+  color: #222;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  // font-size: 10px;
+}
+
+.x_glosed_X {
+  width: 9px;
+  height: 11px;
+}
+
+.cart_product {
+
+  &_cart_option{
+    width: 320px;
+  }
+
+  &_1{
+    width: 320px;
+    height: 188px;
+  }
+
+  &_2 {
+    width: 320px;
+    height: 188px;
+  }
+
+  &_picture{
+    width: 140px;
+    height: 188px;
+  }
+
+  &_description {
+    width: 196px;
+    height: 188px;
+    padding: 13px 12px 37px;
+  }
+
+  &_title_description {
+    width: 155px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+}
+
+.button_option_cart_product_text {
+  color: #575757;
+  text-align: center;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cart_product_making_a_purchase {
+  align-items: center;
+}
+
+.cart_product_proceed_to_checkout {
+  align-items: center;
+}
+
+.price_cart,.text_description_result {
+  font-size: 14px;
+}
+
+.text_description {
+  font-size: 14px;
+  gap: 4px;
+
+  &_value {
+    color: #575757;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.cart_product_cart_option {
+  gap: 9px;
+}
+
+.cart_product_shipping_adress {
+  width: 310px;
+}
+
+.cart_product_1, .cart_product_2 {
+  box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quantity_product {
+  color: #575757;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.title {
+    height: 35px;
+  }
+.window_product {
+  width: 320px;
+}
+
+.cart_product_show {
+  margin-top: 30px;
+
+}
+
+
+.woman_text {
+  font-size: 18px;
+}
+
+// registration caput
 
 
 }

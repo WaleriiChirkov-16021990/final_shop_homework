@@ -409,7 +409,7 @@ body {
   height: 250px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-around;
+  align-items: center;
   justify-content: center;
 }
 
@@ -851,14 +851,13 @@ products */
 }
 
 .slide_product {
-  min-width: 1440px;
   width: 100%;
   height: 777px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #F7F7F7;
-  padding: 11px 0px 44px 0px;
+  padding: 11px 5px 44px 0px;
   margin-bottom: -80px;
 }
 
@@ -923,8 +922,16 @@ products */
   margin-top: 65px;
 }
 
+.add_product {
+  margin-bottom: 20px;
+}
+
 .horizontal_stripe_color {
   margin-bottom: 12px;
+}
+
+.horizontal__line {
+  width: 90%;
 }
 
 .title_discription_product {
@@ -1529,22 +1536,16 @@ summary::-webkit-details-marker {
   background-color: #f1e4e6;
 }
 
-.body_registry {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .form_registry {
   display: flex;
   justify-content: space-between;
-  height: 675px;
+  align-items: start;
   padding: 64px 0px 96px;
   width: 100vw;
   max-width: 1140px;
 }
 .form_registry .new_user {
-  display: block;
+  display: flex;
 }
 .form_registry .new_user__data {
   display: flex;
@@ -1669,6 +1670,8 @@ summary::-webkit-details-marker {
   font-weight: 300;
   line-height: normal;
   margin-bottom: 16px;
+  gap: 23px;
+  align-items: baseline;
 }
 .info_li_text {
   margin-left: 23px;
@@ -1900,6 +1903,68 @@ media */
   /*================================================================
   catalog caput
   */
+  /*================================================================
+  registration
+  */
+  .top_left_cart {
+    margin-left: 5%;
+  }
+  .form_registry {
+    justify-content: center;
+    gap: 23px;
+  }
+  .header {
+    width: 91vw;
+  }
+  .info {
+    width: 354px;
+  }
+  .info__title {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .info__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .info_benefit {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  /* =================================================================
+  products */
+  .low_grid_content_product {
+    grid-template-columns: repeat(2, 360px);
+  }
+  .item_three {
+    display: none;
+  }
+  /* =================================================================
+
+  registrations
+  */
+  .cart_product_show {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart_product_making_a_purchase {
+    flex-direction: row;
+    height: 381px;
+    width: 750px;
+  }
 }
 @media (max-width: 320px) {
   .options {
@@ -2317,5 +2382,301 @@ media */
   }
   .left_header_logo {
     margin-right: -13px;
+  }
+  /* =================================================================
+  registration
+  */
+  .top_content_product_cart {
+    justify-content: center;
+    height: 148px;
+  }
+  .form_registry {
+    flex-direction: column;
+    min-width: 300px;
+    align-items: center;
+  }
+  .form_registry .new_user {
+    align-items: center;
+    justify-content: center;
+  }
+  .form_registry .new_user__data {
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    padding: 0px 10px 0px;
+  }
+  .form_registry .new_user__input_info {
+    width: 300px;
+    height: 44px;
+    padding: 13px 17px 16px;
+    color: #B1B1B1;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .form_registry .new_user__title_form {
+    margin-bottom: 21px;
+    color: #222;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .form_registry .new_user__input_firstname {
+    margin-bottom: 21px;
+  }
+  .form_registry .new_user__input_lastname {
+    margin-bottom: 31px;
+  }
+  .form_registry .new_user__check_gender {
+    margin-bottom: 33px;
+    display: flex;
+    align-items: center;
+  }
+  .form_registry .new_user__gender {
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #000;
+    font-family: Lato;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .form_registry .new_user__login_details {
+    margin-bottom: 20px;
+    color: #222;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .form_registry .new_user__input_email {
+    margin-bottom: 21px;
+  }
+  .form_registry .new_user__input_password {
+    margin-bottom: 16px;
+  }
+  .form_registry .new_user__password_info {
+    width: 300px;
+    margin-bottom: 39px;
+    flex-wrap: wrap;
+    color: #B1B1B1;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .form_registry .new_user__button_submit {
+    width: 167px;
+    height: 50px;
+    border: none;
+    background-color: #F16D7F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+  .form_registry .new_user__button_submit_text {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .info {
+    display: flex;
+    width: 316px;
+    height: 337px;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+  .info__title {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 22px;
+  }
+  .info__description {
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 21px;
+  }
+  .info_benefit {
+    font-size: 16px;
+    display: flex;
+    color: #000;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 16px;
+    gap: 23px;
+    align-items: baseline;
+  }
+  .info_li_text {
+    margin-left: 23px;
+  }
+  .slide_product {
+    height: 454px;
+  }
+  .slider__image {
+    width: 250px;
+  }
+  .low_grid_content_product {
+    grid-template-columns: repeat(1, 320px);
+    grid-template-rows: repeat(2, 520px);
+  }
+  .discription_product {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+  }
+  .detailed_description {
+    width: 99%;
+    height: 454px;
+  }
+  .horizontal__line {
+    width: 310px;
+  }
+  .option1_product, .option2_product, .option3_product {
+    color: #6F6E6E;
+    font-family: Lato;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  /* =================================================================
+
+  registrations
+  */
+  .cart_product_show {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart_product_proceed_to_checkout {
+    width: 320px;
+    margin-bottom: 96px;
+  }
+  .cart_product_making_a_purchase {
+    flex-direction: column;
+    height: auto;
+    width: 318px;
+  }
+  .cart_product_show {
+    width: 320px;
+  }
+  .title_discription_product {
+    color: #222;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .x_glosed_X {
+    width: 9px;
+    height: 11px;
+  }
+  .cart_product_cart_option {
+    width: 320px;
+  }
+  .cart_product_1 {
+    width: 320px;
+    height: 188px;
+  }
+  .cart_product_2 {
+    width: 320px;
+    height: 188px;
+  }
+  .cart_product_picture {
+    width: 140px;
+    height: 188px;
+  }
+  .cart_product_description {
+    width: 196px;
+    height: 188px;
+    padding: 13px 12px 37px;
+  }
+  .cart_product_title_description {
+    width: 155px;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .button_option_cart_product_text {
+    color: #575757;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .cart_product_making_a_purchase {
+    align-items: center;
+  }
+  .cart_product_proceed_to_checkout {
+    align-items: center;
+  }
+  .price_cart, .text_description_result {
+    font-size: 14px;
+  }
+  .text_description {
+    font-size: 14px;
+    gap: 4px;
+  }
+  .text_description_value {
+    color: #575757;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .cart_product_cart_option {
+    gap: 9px;
+  }
+  .cart_product_shipping_adress {
+    width: 310px;
+  }
+  .cart_product_1, .cart_product_2 {
+    box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+  .quantity_product {
+    color: #575757;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .title {
+    height: 35px;
+  }
+  .window_product {
+    width: 320px;
+  }
+  .cart_product_show {
+    margin-top: 30px;
+  }
+  .woman_text {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
