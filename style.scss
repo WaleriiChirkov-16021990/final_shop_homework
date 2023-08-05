@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 .center {
   padding-left: calc(50% - $widthSite/2);
   padding-right: calc(50% - $widthSite/2);
@@ -28,7 +32,7 @@ a {
 
 .text_7,
 .text_9 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: $text_7_9_color;
   text-align: center;
@@ -39,7 +43,7 @@ a {
 
 .text_8,
 .text_10 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: $text_8_10_color;
   text-align: center;
@@ -142,10 +146,15 @@ body {
   align-items: center;
 }
 
+.content_top_img {
+  width: 100%;
+}
+
+
 .center_top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding-bottom: 30px;
 }
@@ -242,7 +251,7 @@ body {
 .h3_low {
   color: #222;
   font-family: Lato;
-  font-size: 30px;
+  font-size: 1.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -251,27 +260,46 @@ body {
 .p_low {
   color: #9f9f9f;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
+
 .low_flex_grid_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // max-width: 1140px;
 }
 
 .low_grid_content {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
-  grid-template-rows: repeat(2, 581px);
+  // width: 100%;
+  max-width: 1140px;
+  // grid-template-columns: repeat(3, 360px);
+  // grid-template-rows: repeat(2, 581px);
+  grid-template-columns: repeat(auto-fit, minmax(265px,1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 581px));
+  // grid-auto-flow: dense;
   gap: 30px;
 }
 
+.img_grid_center {
+  width: 100%;
+}
+
+.img_grid_center_2 {
+  width: 40%;
+  height: 100%;
+  margin-top: 8px;
+  margin-bottom: 7px;
+  // height: auto;
+}
+
 .low_grid_text_box {
-  width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: $background_grid_info_text;
@@ -282,15 +310,21 @@ body {
 }
 
 .item {
+  width: 100%;
+  height: 85%;
   max-width: 360px;
+  min-width: 250px;
   max-height: 581px;
   background-color: #f7e4e2;
-  margin-bottom: 48px;
+  // margin-bottom: 48px;
 }
 
 .img {
-  width: 360px;
-  height: 420px;
+  // width: 360px;
+  // height: 420px;
+  height: auto;
+  width: 100%;
+  max-height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,7 +333,7 @@ body {
 .h5_grid_title {
   color: #000;
   font-family: Lato;
-  font-size: 17px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -308,7 +342,7 @@ body {
 .p_greed_text {
   color: #5d5d5d;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -317,7 +351,7 @@ body {
 .price {
   color: $color_price;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -334,7 +368,7 @@ body {
 .ref_low_text {
   color: #f26376;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -345,10 +379,12 @@ body {
 .options {
   max-width: 1140px;
   max-height: 341px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1vw;
 }
 
 .options_height_background {
@@ -358,7 +394,7 @@ body {
 }
 
 .items_option {
-  width: 360px;
+  width: 100%;
   height: 133px;
   display: flex;
   flex-direction: column;
@@ -368,7 +404,7 @@ body {
 
 .option_title {
   font-family: Lato;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
@@ -377,10 +413,12 @@ body {
 }
 
 .option_text {
+  width: 100%;
+  max-width: 360px;
   color: #fbfbfb;
   text-align: center;
   font-family: Lato;
-  font-size: 13.972px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -422,7 +460,7 @@ body {
   color: #222224;
   text-align: center;
   font-family: Lato;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -431,7 +469,7 @@ body {
   color: #222224;
   text-align: center;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 167.2%; /* 40.128px */
@@ -440,7 +478,7 @@ body {
 .text_pic {
   color: #222224;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 167.2%;
@@ -453,7 +491,7 @@ body {
 .text_enter_mail {
   color: #222224;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -472,7 +510,7 @@ body {
   color: #fff;
   text-align: center;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -541,7 +579,7 @@ body {
 .footer_text_left {
   color: #fbfbfb;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -597,7 +635,7 @@ body {
   display: flex;
   color: #fff;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -620,7 +658,7 @@ body {
   background: rgba(33, 22, 22, 0.7);
   opacity: 0;
   color: #fff;
-  font-size: 40px;
+  font-size: 2.5rem;
   transition: opacity 0.4s linear;
 }
 
@@ -907,7 +945,7 @@ body {
     color: $color_button_email;
     text-align: center;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -974,8 +1012,12 @@ body {
 products */
 .low_grid_content_product {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
-    grid-template-rows: repeat(1, 581px);
+    width: 100%;
+    max-width: 1140px;
+    // grid-template-columns: repeat(3, 360px);
+    // grid-template-rows: repeat(1, 581px);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
+    grid-auto-flow: dense;
     justify-content: center;
     gap: 30px;
     margin-bottom: 98px;
@@ -1030,7 +1072,7 @@ products */
 .nav_ref_header {
 color: #636363;
 font-family: Lato;
-font-size: 14px;
+font-size: 0.9rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1039,7 +1081,7 @@ line-height: normal;
 .new_arrivals_red {
 color: #F16D7F;
 font-family: Lato;
-font-size: 14px;
+font-size: 0.9rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -1048,7 +1090,7 @@ line-height: normal;
 .new_arrivals_red_left {
 color: #F16D7F;
 font-family: Lato;
-font-size: 24px;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1083,7 +1125,7 @@ line-height: normal;
 .theme_discription {
   color: #F16D7F;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1108,7 +1150,7 @@ line-height: normal;
 margin-bottom: 48px;
 color: #4D4D4D;
 font-family: Lato;
-font-size: 18px;
+font-size: 1.1rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1122,7 +1164,7 @@ margin-bottom: 33px;
 color: #5E5E5E;
 text-align: center;
 font-family: Lato;
-font-size: 14px;
+font-size: 0.9rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1144,7 +1186,7 @@ margin-bottom: 12px;
 margin-bottom: 65px;
 color: #EF5B70;
 font-family: Lato;
-font-size: 24px;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1166,7 +1208,7 @@ line-height: normal;
 .to_take_product {
 color: #F26376;
 font-family: Lato;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1178,7 +1220,7 @@ display: flex;
 gap: 9px;
 color: #6F6E6E;
 font-family: Lato;
-font-size: 14px;
+font-size: 0.9rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1237,7 +1279,7 @@ margin-bottom: 39px;
   &_text {
     color: #000;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1251,7 +1293,7 @@ margin-bottom: 39px;
   &[open] .filter_text{
     color: #EF5B70;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1274,7 +1316,7 @@ margin-bottom: 39px;
     width: 327px ;
     color: #6F6E6E;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1294,7 +1336,7 @@ margin-bottom: 39px;
 
     color: #6F6E6E;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1360,7 +1402,7 @@ summary {
   &_text {
     color: #6F6E6E;
     font-family: Lato;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1426,7 +1468,7 @@ summary {
   label {
     color: #6F6E6E;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1460,7 +1502,7 @@ summary {
 .page_link_ {
 color: #C4C4C4;
 font-family: Lato;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1473,7 +1515,7 @@ padding: 1px;
 .page_link_catalog1 {
 color: #EF5B70;
 font-family: Lato;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
@@ -1585,7 +1627,7 @@ line-height: normal;
   &_shipping_adress {
     color: #222;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1603,7 +1645,7 @@ line-height: normal;
   &_submit_purchase {
     color: #4A4A4A;
     font-family: Lato;
-    font-size: 11px;
+    font-size: 0.7rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1640,7 +1682,7 @@ line-height: normal;
 .sub_totoal {
   color: #4A4A4A;
   font-family: Lato;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1650,7 +1692,7 @@ line-height: normal;
 .grand_totol {
   color: #222;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1680,7 +1722,7 @@ line-height: normal;
   background-color: #F16D7F;
   color: #FFF;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1725,7 +1767,7 @@ line-height: normal;
 
   color: #575757;
   font-family: Lato;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1733,7 +1775,7 @@ line-height: normal;
   &_result {
     color: #6F6E6E;
     font-family: Lato;
-    font-size: 22px;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1743,7 +1785,7 @@ line-height: normal;
 .price_cart {
 color: #EF5B70;
 font-family: Lato;
-font-size: 22px;
+font-size: 1.4rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1772,7 +1814,7 @@ line-height: normal;
 .count_product {
   color: #656565;
 font-family: Lato;
-font-size: 18px;
+font-size: 1.1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -1830,7 +1872,7 @@ line-height: normal;
       padding: 13px 17px 16px;
       color: #B1B1B1;
       font-family: Lato;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -1841,7 +1883,7 @@ line-height: normal;
 
       color: #222;
       font-family: Lato;
-      font-size: 16px;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -1867,7 +1909,7 @@ line-height: normal;
 
       color: #000;
       font-family: Lato;
-      font-size: 11px;
+      font-size: 0.7rem;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -1878,7 +1920,7 @@ line-height: normal;
 
       color: #222;
       font-family: Lato;
-      font-size: 16px;
+      font-size: 1rem;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -1898,7 +1940,7 @@ line-height: normal;
 
       color: #B1B1B1;
       font-family: Lato;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -1918,7 +1960,7 @@ line-height: normal;
       &_text{
         color: #FFF;
         font-family: Lato;
-        font-size: 14px;
+        font-size: 0.8rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -1957,7 +1999,7 @@ line-height: normal;
   &__title{
     color: #000;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1967,7 +2009,7 @@ line-height: normal;
   &__description {
     color: #000;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1978,7 +2020,7 @@ line-height: normal;
     display: flex;
     color: #000;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1997,10 +2039,17 @@ line-height: normal;
 media */
 
 
-@media (min-width: 1241px) {
+@media screen and (min-width: 1200px) {
+
+  html {
+    font-size: 16px;
+  }
+
+
+
   .text_box_title {
     color: #222;
-    font-size: 48px;
+    font-size: 3rem;
     font-family: Lato;
     font-style: normal;
     font-weight: 900;
@@ -2009,7 +2058,7 @@ media */
 
   .text_box_text_black {
     color: #222;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: Lato;
     font-style: normal;
     font-weight: 700;
@@ -2021,7 +2070,7 @@ media */
     color: $text_7_9_color;
     text-align: center;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -2032,14 +2081,43 @@ media */
     color: $text_8_10_color;
     text-align: center;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 }
 
+@media screen and (max-width: 1199px) and (min-width: 1025px) {
+  html {
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  html {
+    font-style: 14px;
+  }
+
+
+    // .content_top_img {
+    // max-width: 320px;
+    // min-height: auto;
+    // max-height: 168px;
+  // }
+}
+
 @media screen and (max-width: 768px) {
+
+
+  html {
+    font-size: 13px;
+  }
+
+
   .left_picture_content {
     position: absolute;
     top: 20%;
@@ -2243,7 +2321,7 @@ media */
     height: 132px;
     position: relative;
     box-sizing: border-box;
-    padding-left: 2rem;
+    padding-left: 0.5rem;
   }
 
 
@@ -2354,6 +2432,14 @@ registrations
 }
 
 @media (max-width: 320px) {
+
+
+  html {
+    font-size: 12p;
+  }
+
+
+
   .options {
     max-width: 320px;
     max-height: 574px;
@@ -3038,8 +3124,9 @@ registration
 
 .low_grid_content_product {
   // width: 320px;
-    grid-template-columns: repeat(1, 320px);
-    grid-template-rows: repeat(2, 520px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+    // grid-template-columns: repeat(1, 320px);
+    // grid-template-rows: repeat(2, 520px);
 }
 
 .discription_product {

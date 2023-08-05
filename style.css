@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -26,7 +30,7 @@ a {
 
 .text_7,
 .text_9 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #FFF;
   text-align: center;
@@ -37,7 +41,7 @@ a {
 
 .text_8,
 .text_10 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #f16d7f;
   text-align: center;
@@ -138,10 +142,14 @@ body {
   align-items: center;
 }
 
+.content_top_img {
+  width: 100%;
+}
+
 .center_top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding-bottom: 30px;
 }
@@ -238,7 +246,7 @@ body {
 .h3_low {
   color: #222;
   font-family: Lato;
-  font-size: 30px;
+  font-size: 1.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -247,7 +255,7 @@ body {
 .p_low {
   color: #9f9f9f;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -261,13 +269,25 @@ body {
 
 .low_grid_content {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
-  grid-template-rows: repeat(2, 581px);
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 581px));
   gap: 30px;
 }
 
+.img_grid_center {
+  width: 100%;
+}
+
+.img_grid_center_2 {
+  width: 40%;
+  height: 100%;
+  margin-top: 8px;
+  margin-bottom: 7px;
+}
+
 .low_grid_text_box {
-  width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #f8f8f8;
@@ -278,15 +298,18 @@ body {
 }
 
 .item {
+  width: 100%;
+  height: 85%;
   max-width: 360px;
+  min-width: 250px;
   max-height: 581px;
   background-color: #f7e4e2;
-  margin-bottom: 48px;
 }
 
 .img {
-  width: 360px;
-  height: 420px;
+  height: auto;
+  width: 100%;
+  max-height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,7 +318,7 @@ body {
 .h5_grid_title {
   color: #000;
   font-family: Lato;
-  font-size: 17px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -304,7 +327,7 @@ body {
 .p_greed_text {
   color: #5d5d5d;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -313,7 +336,7 @@ body {
 .price {
   color: #f16d7f;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -330,7 +353,7 @@ body {
 .ref_low_text {
   color: #f26376;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -341,10 +364,9 @@ body {
 .options {
   max-width: 1140px;
   max-height: 341px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1vw;
 }
 
 .options_height_background {
@@ -354,7 +376,7 @@ body {
 }
 
 .items_option {
-  width: 360px;
+  width: 100%;
   height: 133px;
   display: flex;
   flex-direction: column;
@@ -364,7 +386,7 @@ body {
 
 .option_title {
   font-family: Lato;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
@@ -373,10 +395,12 @@ body {
 }
 
 .option_text {
+  width: 100%;
+  max-width: 360px;
   color: #fbfbfb;
   text-align: center;
   font-family: Lato;
-  font-size: 13.972px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -417,7 +441,7 @@ body {
   color: #222224;
   text-align: center;
   font-family: Lato;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -427,7 +451,7 @@ body {
   color: #222224;
   text-align: center;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 167.2%; /* 40.128px */
@@ -436,7 +460,7 @@ body {
 .text_pic {
   color: #222224;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 167.2%;
@@ -449,7 +473,7 @@ body {
 .text_enter_mail {
   color: #222224;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -468,7 +492,7 @@ body {
   color: #fff;
   text-align: center;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -537,7 +561,7 @@ body {
 .footer_text_left {
   color: #fbfbfb;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -592,7 +616,7 @@ body {
   display: flex;
   color: #fff;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -616,7 +640,7 @@ body {
   background: rgba(33, 22, 22, 0.7);
   opacity: 0;
   color: #fff;
-  font-size: 40px;
+  font-size: 2.5rem;
   transition: opacity 0.4s linear;
 }
 
@@ -773,7 +797,7 @@ body {
   color: #fff;
   text-align: center;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -812,8 +836,10 @@ body {
 products */
 .low_grid_content_product {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
-  grid-template-rows: repeat(1, 581px);
+  width: 100%;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 30%));
+  grid-auto-flow: dense;
   justify-content: center;
   gap: 30px;
   margin-bottom: 98px;
@@ -864,7 +890,7 @@ products */
 .nav_ref_header {
   color: #636363;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -873,7 +899,7 @@ products */
 .new_arrivals_red {
   color: #F16D7F;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -882,7 +908,7 @@ products */
 .new_arrivals_red_left {
   color: #F16D7F;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -914,7 +940,7 @@ products */
 .theme_discription {
   color: #F16D7F;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -938,7 +964,7 @@ products */
   margin-bottom: 48px;
   color: #4D4D4D;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -952,7 +978,7 @@ products */
   color: #5E5E5E;
   text-align: center;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -972,7 +998,7 @@ products */
   margin-bottom: 65px;
   color: #EF5B70;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -991,7 +1017,7 @@ products */
 .to_take_product {
   color: #F26376;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1002,7 +1028,7 @@ products */
   gap: 9px;
   color: #6F6E6E;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1048,7 +1074,7 @@ products */
 .filter_text {
   color: #000;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1060,7 +1086,7 @@ products */
 .filter[open] .filter_text {
   color: #EF5B70;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1079,7 +1105,7 @@ products */
   width: 327px;
   color: #6F6E6E;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1096,7 +1122,7 @@ products */
 .filter_link {
   color: #6F6E6E;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1153,7 +1179,7 @@ summary::-webkit-details-marker {
 .sort_text {
   color: #6F6E6E;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1200,7 +1226,7 @@ summary::-webkit-details-marker {
 .sort label {
   color: #6F6E6E;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1225,7 +1251,7 @@ summary::-webkit-details-marker {
 .page_link_ {
   color: #C4C4C4;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1238,7 +1264,7 @@ summary::-webkit-details-marker {
 .page_link_catalog1 {
   color: #EF5B70;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1337,7 +1363,7 @@ summary::-webkit-details-marker {
 .cart_product_shipping_adress {
   color: #222;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1350,7 +1376,7 @@ summary::-webkit-details-marker {
 .cart_product_submit_purchase {
   color: #4A4A4A;
   font-family: Lato;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1381,7 +1407,7 @@ summary::-webkit-details-marker {
 .sub_totoal {
   color: #4A4A4A;
   font-family: Lato;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1391,7 +1417,7 @@ summary::-webkit-details-marker {
 .grand_totol {
   color: #222;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1422,7 +1448,7 @@ summary::-webkit-details-marker {
   background-color: #F16D7F;
   color: #FFF;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1463,7 +1489,7 @@ summary::-webkit-details-marker {
   gap: 6px;
   color: #575757;
   font-family: Lato;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1471,7 +1497,7 @@ summary::-webkit-details-marker {
 .text_description_result {
   color: #6F6E6E;
   font-family: Lato;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1480,7 +1506,7 @@ summary::-webkit-details-marker {
 .price_cart {
   color: #EF5B70;
   font-family: Lato;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1509,7 +1535,7 @@ summary::-webkit-details-marker {
 .count_product {
   color: #656565;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1558,7 +1584,7 @@ summary::-webkit-details-marker {
   padding: 13px 17px 16px;
   color: #B1B1B1;
   font-family: Lato;
-  font-size: 13px;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1567,7 +1593,7 @@ summary::-webkit-details-marker {
   margin-bottom: 21px;
   color: #222;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1588,7 +1614,7 @@ summary::-webkit-details-marker {
   margin-left: 10px;
   color: #000;
   font-family: Lato;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1597,7 +1623,7 @@ summary::-webkit-details-marker {
   margin-bottom: 20px;
   color: #222;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1613,7 +1639,7 @@ summary::-webkit-details-marker {
   margin-bottom: 39px;
   color: #B1B1B1;
   font-family: Lato;
-  font-size: 13px;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1631,7 +1657,7 @@ summary::-webkit-details-marker {
 .form_registry .new_user__button_submit_text {
   color: #FFF;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1646,7 +1672,7 @@ summary::-webkit-details-marker {
 .info__title {
   color: #000;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1655,7 +1681,7 @@ summary::-webkit-details-marker {
 .info__description {
   color: #000;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1665,7 +1691,7 @@ summary::-webkit-details-marker {
   display: flex;
   color: #000;
   font-family: Lato;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1679,10 +1705,13 @@ summary::-webkit-details-marker {
 
 /* =================================================================
 media */
-@media (min-width: 1241px) {
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
   .text_box_title {
     color: #222;
-    font-size: 48px;
+    font-size: 3rem;
     font-family: Lato;
     font-style: normal;
     font-weight: 900;
@@ -1690,7 +1719,7 @@ media */
   }
   .text_box_text_black {
     color: #222;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: Lato;
     font-style: normal;
     font-weight: 700;
@@ -1701,7 +1730,7 @@ media */
     color: #FFF;
     text-align: center;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1711,13 +1740,26 @@ media */
     color: #f16d7f;
     text-align: center;
     font-family: Lato;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 }
+@media screen and (max-width: 1199px) and (min-width: 1025px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-style: 14px;
+  }
+}
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
   .left_picture_content {
     position: absolute;
     top: 20%;
@@ -1898,7 +1940,7 @@ media */
     height: 132px;
     position: relative;
     box-sizing: border-box;
-    padding-left: 2rem;
+    padding-left: 0.5rem;
   }
   /*================================================================
   catalog caput
@@ -1967,6 +2009,9 @@ media */
   }
 }
 @media (max-width: 320px) {
+  html {
+    font-size: 12p;
+  }
   .options {
     max-width: 320px;
     max-height: 574px;
@@ -2538,8 +2583,7 @@ media */
     width: 250px;
   }
   .low_grid_content_product {
-    grid-template-columns: repeat(1, 320px);
-    grid-template-rows: repeat(2, 520px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
   }
   .discription_product {
     display: flex;
