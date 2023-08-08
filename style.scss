@@ -239,7 +239,8 @@ body {
 }
 .low_content {
   // max-width: 1600px;
-  width: 100vw;
+  width: 100%;
+  max-width: 1140px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -519,8 +520,11 @@ body {
   justify-content: center;
   flex-shrink: 0;
   position: absolute;
-  top: 4px;
-  left: 5px;
+  // top: 4px;
+  // left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .left_field {
@@ -2121,6 +2125,23 @@ media */
   .discription_product {
     flex-wrap: nowrap;
   }
+
+
+  // .filter {
+  //   width: 321px;
+  // }
+
+  .center {
+    padding-left: calc(50% - 379px);
+    padding-right: calc(50% - 379px);
+  }
+
+  .sort {
+    left: 398px;
+  }
+  .low_content {
+    max-width: 768px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2135,7 +2156,7 @@ media */
   }
 
   .filter {
-    left: 0.75rem;
+    // left: 0.75rem;
   }
 
   .comment_woman {
@@ -2304,8 +2325,8 @@ media */
     // gap: 30px;
   }
   .center{
-    padding-left: calc(50% - 375px);
-    padding-right: calc(50% - 375px);
+    padding-left: calc(50% - 379px);
+    padding-right: calc(50% - 379px);
   }
 
   // .filter_sort {
@@ -2460,8 +2481,9 @@ media */
 
 @media (max-width : 450px) {
   .low_grid_content_product {
-    max-width: 67%;
-  }  
+    // max-width: 67%;
+    max-width: 100%;
+  }
 
   .detailed_description {
     width: 100%;
@@ -2583,6 +2605,42 @@ media */
 }
 
 
+@media (max-width: 426px) {
+  .sort {
+    left: 116px;
+  }
+
+  .sort_size {
+    left: -16px;
+  }
+
+  summary {
+    width: 131px;
+  }
+
+  .sort_price {
+    left: -35px;
+  }
+
+  .sort_check_box_price {
+    width: 58px;
+  }
+
+  .sort_check_box_size {
+    width: 60px;
+  }
+
+  .sort_check_box_trending {
+    width: 79px;
+  }
+
+
+  .center {
+    padding-left: calc(50% - 180px);
+    padding-right: calc(50% - 180px);
+}
+}
+
 
 @media (max-width: 320px) {
 
@@ -2655,6 +2713,10 @@ media */
 
   .left_field {
     width: 200px;
+  }
+
+  .right_field_svg {
+    width: 82px;
   }
 
   .footer {
@@ -2873,6 +2935,10 @@ media */
     padding: 0px 5px;
   }
 
+  .text_submit {
+    width: 80px;
+  }
+
   .button_email {
     width: 80px;
     display: flex;
@@ -2927,12 +2993,12 @@ media */
   }
 
   .center {
-    padding-left: calc(50% - 151px);
-    padding-right: calc(50% - 151px);
+    padding-left: calc(50% - 160px);
+    padding-right: calc(50% - 160px);
   }
 
   .filter {
-    width: 210px;
+    width: 320px;
   }
 
   .filter_text {
@@ -2979,7 +3045,7 @@ media */
 
   .sort_price {
     width: 48px;
-    left: 0px;
+    left: 6px;
   }
 
   .sort_check_box_size {
