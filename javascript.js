@@ -17,19 +17,33 @@ let cartSelectProduct = []; //TODO: select product from user cart
 // }
 const counterProductInCart = document.createElement('i');
 counterProductInCart.style.backgroundColor = 'orange';  // color of the product counter in the cart
-const superLowText = document.querySelector('.super_low_text')
-
+const optionsHeightBackground = document.querySelector('.options_height_background')
 const cartItem = document.createElement('div');
 cartItem.classList.add('cart_items');
 cartItem.style.marginBottom = '40px'; // margin
 const por = document.createElement('p');
-por.textContent = "This your Cart";
+por.textContent = "Cart Items";
+por.style.fontFamily = 'Lato';
+por.style.color = '#222';
+por.style.fontSize = '30px';
+por.style.fontWeight = '400';
 cartItem.appendChild(por);
 const cartProducts = document.createElement('div');
+// cartProducts.style.display = 'inline-block';
+optionsHeightBackground.insertAdjacentElement("afterend", cartItem);
 cartItem.appendChild(cartProducts);
-cartProducts.style.display = 'inline-block';
-superLowText.insertAdjacentElement("afterend", cartItem);
 cartItem.style.display = 'none';
+
+
+const cartProductShow = document.createElement('div');
+cartProductShow.classList.add('center');
+cartProductShow.classList.add('cart_product_show');
+cartProducts.appendChild(cartProductShow);
+
+const windowProduct = document.createElement('div');
+windowProduct.classList.add('cart_product');
+windowProduct.classList.add('window_product');
+cartProductShow.appendChild(windowProduct);
 
 
 localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
@@ -118,24 +132,133 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
 
     lowGridContent.appendChild(item);
     maskFromHowerMouse.addEventListener('click', function () {
-        cartSelectProduct.push({
-            "pathImgItem": pathImgItem,
-            "textTitle": textTitle,
-            "textDescription": textDescription,
-            "priceItem": priceItem
-        });
+        let flag = true;
+        if (cartSelectProduct.length > 0) {
+            // optionsHeightBackground.style.marginBottom = '96px';
+            cartSelectProduct.forEach((element) => {
+                if (element.pathImgItem === pathImgItem) {
+                    element.countProduct += 1;
+                    flag = false;
+                }
+            });
+        }
+        if (flag) {
+            cartSelectProduct.push({
+                "pathImgItem": pathImgItem,
+                "textTitle": textTitle,
+                "textDescription": textDescription,
+                "priceItem": priceItem,
+                "countProduct": 1,
+            });
+        }
+
         counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ ";
         cartItem.style.display = 'inline-block';
     })
-    cartSelectProduct.forEach(({pathImgItem, textTitle, textDescription, priceItem}) =>{
-        const cartProductShow = document.createElement('div');
-        cartProductShow.classList.add('center');
-        cartProductShow.classList.add('cart_product_show');
 
-        const windowProduct = document.createElement('div');
-        windowProduct.classList.add('cart_product');
-        windowProduct.classList.add('window_product');
-        const cartProductShow = document.createElement('div');
+
+    cartSelectProduct.forEach(({pathImgItem, textTitle, textDescription, priceItem, countProduct}) => {
+
+
+        const cartProduct1 = document.createElement('div');
+        cartProduct1.classList.add('cart_product_1');
+
+        const cartProductPicture = document.createElement('div');
+        cartProduct1.appendChild(cartProductPicture);
+
+        const pictureImg = document.createElement('img');
+        pictureImg.classList.add('cart_product_picture');
+        pictureImg.setAttribute('src', pathImgItem);
+        pictureImg.setAttribute('alt', pathImgItem + '_icon');
+        cartProductPicture.appendChild(pictureImg);
+
+        const cartProductDescription = document.createElement('div');
+        cartProductDescription.classList.add('cart_product_description');
+        cartProduct1.appendChild(cartProductDescription);
+
+
+        const cartProductTitleDescription = document.createElement('div');
+        cartProductTitleDescription.classList.add('cart_product_title_description');
+        cartProductDescription.appendChild(cartProductTitleDescription);
+
+        const cartProductTitle = document.createElement('div');
+        cartProductTitle.classList.add('title');
+        cartProductTitleDescription.appendChild(cartProductTitle);
+
+        const cartTitleDiscriptionProduct = document.createElement('h4');
+        cartTitleDiscriptionProduct.classList.add('title_discription_product');
+        cartTitleDiscriptionProduct.textContent = textTitle;
+        cartProductTitle.appendChild(cartTitleDiscriptionProduct);
+
+        const cartProductTitleXClosed = document.createElement('div');
+        cartProductTitleXClosed.classList.add('x_glosed');
+
+        const cartxGlosedX = document.createElement('img');
+        cartxGlosedX.classList.add('x_glosed_X');
+        cartxGlosedX.setAttribute('src', 'img/mask/closed.svg');
+        cartxGlosedX.setAttribute('alt', 'img/mask/closed.svg__icon_X');
+        cartProductTitleXClosed.appendChild(cartxGlosedX);
+
+
+        const cartTextDescription = document.createElement('div');
+        cartTextDescription.classList.add('text_description');
+        cartProductDescription.appendChild(cartTextDescription);
+
+
+        const cartTextDescriptionP1 = document.createElement('p');
+        cartTextDescriptionP1.textContent = 'Price: ';
+
+        const cartTextDescriptionSpan1 = document.createElement('span');
+        cartTextDescriptionSpan1.textContent = priceItem;
+        cartTextDescriptionSpan1.classList.add('price_cart');
+        cartTextDescriptionP1.appendChild(cartTextDescriptionSpan1);
+
+
+        const cartTextDescriptionP2 = document.createElement('p');
+        cartTextDescriptionP2.textContent = 'Color: ';
+        const cartTextDescriptionSpan2 = document.createElement('span');
+        cartTextDescriptionSpan2.classList.add('text_description_result');
+        cartTextDescriptionSpan2.textContent = 'Black';
+        cartTextDescriptionP2.appendChild(cartTextDescriptionSpan2);
+
+
+
+        const cartTextDescriptionP3 = document.createElement('p');
+        cartTextDescriptionP3.textContent = 'Size: ';
+        const cartTextDescriptionSpan3 = document.createElement('span');
+        cartTextDescriptionSpan3.classList.add('text_description_result');
+        cartTextDescriptionSpan3.textContent = 'XL';
+        cartTextDescriptionP3.appendChild(cartTextDescriptionSpan3);
+
+        const cartQuantityProduct = document.createElement('div');
+        cartQuantityProduct.classList.add('quantity_product');
+
+        const cartQuantityP = document.createElement('p');
+        cartQuantityP.textContent = 'Quantity: ';
+        cartQuantityProduct.appendChild(cartQuantityP);
+        const cartQuantityCount = document.createElement('div');
+
+        cartQuantityCount.classList.add('quantity_count');
+        const cartQuantityCountP = document.createElement('p');
+        cartQuantityCountP.classList.add('count_product');
+        cartQuantityCount.textContent = countProduct;
+        cartQuantityCount.appendChild(cartQuantityCountP);
+        cartQuantityProduct.appendChild(cartQuantityCount);
+
+
+        cartTextDescription.appendChild(cartTextDescriptionP1);
+        cartTextDescription.appendChild(cartTextDescriptionP2);
+        cartTextDescription.appendChild(cartTextDescriptionP3);
+        cartTextDescription.appendChild(cartQuantityProduct);
+        windowProduct.appendChild(cartProduct1);
+
+
+
+        // const xClosesImg = document.querySelector('.x_glosed_X');
+        // xClosesImg.forEach(elem => {
+        //     elem.addEventListener('click', (target) =>)
+        // })
+
 
     })
 
