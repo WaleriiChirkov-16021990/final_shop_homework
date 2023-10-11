@@ -6,15 +6,8 @@ const localItem = JSON.parse(localData);
 
 const lowGridContent = document.querySelector('.low_grid_content');
 
-let cartSelectProduct = []; //TODO: select product from user cart
+let cartSelectProduct = [];
 
-// function Product(pathImgItem, textTitle, textDescription, priceItem) {
-
-//     this.pathImgItem = pathImgItem;
-//     this.textTitle = textTitle;
-//     this.textDescription = textDescription;
-//     this.priceItem = priceItem;
-// }
 const counterProductInCart = document.createElement('i');
 counterProductInCart.style.backgroundColor = 'orange';  // color of the product counter in the cart
 const optionsHeightBackground = document.querySelector('.options_height_background')
@@ -48,6 +41,8 @@ const windowProduct = document.createElement('figure');
 windowProduct.classList.add('cart_product');
 windowProduct.classList.add('window_product');
 cartProductShow.appendChild(windowProduct);
+console.log(cartSelectProduct);
+
 
 
 localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
@@ -136,6 +131,7 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
     lowGridContent.appendChild(item);
 
 
+
     maskFromHowerMouse.addEventListener('click', function () {
         let flag = true;
         if (cartSelectProduct.length > 0) {
@@ -160,7 +156,107 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
         counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ ";
         cartItem.style.display = 'inline-block';
         // });
+        // cartSelectProduct.at(-1).(({pathImgItem, textTitle, textDescription, priceItem, countProduct}) => {
+//================================================================
 
+        // const cartProduct1 = document.createElement('div');
+        // cartProduct1.classList.add('cart_product_1');
+        // windowProduct.appendChild(cartProduct1);
+        //
+        // const cartProductPicture = document.createElement('div');
+        // cartProduct1.appendChild(cartProductPicture);
+        //
+        // const pictureImg = document.createElement('img');
+        // pictureImg.classList.add('cart_product_picture');
+        // pictureImg.setAttribute('src', cartSelectProduct.at(-1).pathImgItem);
+        // pictureImg.setAttribute('alt', cartSelectProduct.at(-1).pathImgItem + '_icon');
+        // cartProductPicture.appendChild(pictureImg);
+        //
+        // const cartProductDescription = document.createElement('div');
+        // cartProductDescription.classList.add('cart_product_description');
+        // cartProduct1.appendChild(cartProductDescription);
+        //
+        //
+        // const cartProductTitleDescription = document.createElement('div');
+        // cartProductTitleDescription.classList.add('cart_product_title_description');
+        // cartProductDescription.appendChild(cartProductTitleDescription);
+        //
+        // const cartProductTitle = document.createElement('div');
+        // cartProductTitle.classList.add('title');
+        // cartProductTitleDescription.appendChild(cartProductTitle);
+        //
+        // const cartTitleDiscriptionProduct = document.createElement('h4');
+        // cartTitleDiscriptionProduct.classList.add('title_discription_product');
+        // cartTitleDiscriptionProduct.textContent = cartSelectProduct.at(-1).textTitle;
+        // cartProductTitle.appendChild(cartTitleDiscriptionProduct);
+        //
+        // const cartProductTitleXClosed = document.createElement('div');
+        // cartProductTitleXClosed.classList.add('x_glosed');
+        // cartProductTitleDescription.appendChild(cartProductTitleXClosed);
+        //
+        //
+        // const cartxGlosedX = document.createElement('img');
+        // cartxGlosedX.classList.add('x_glosed_X');
+        // cartxGlosedX.setAttribute('src', 'img/mask/closed.svg');
+        // cartxGlosedX.setAttribute('alt', 'img/mask/closed.svg__icon_X');
+        // cartProductTitleXClosed.appendChild(cartxGlosedX);
+        //
+        //
+        //
+        // const cartTextDescription = document.createElement('div');
+        // cartTextDescription.classList.add('text_description');
+        // cartProductDescription.appendChild(cartTextDescription);
+        //
+        //
+        // const cartTextDescriptionP1 = document.createElement('p');
+        // cartTextDescriptionP1.textContent = 'Price: ';
+        //
+        // const cartTextDescriptionSpan1 = document.createElement('span');
+        // cartTextDescriptionSpan1.textContent = priceItem;
+        // cartTextDescriptionSpan1.classList.add('price_cart');
+        // cartTextDescriptionP1.appendChild(cartTextDescriptionSpan1);
+        //
+        //
+        // const cartTextDescriptionP2 = document.createElement('p');
+        // cartTextDescriptionP2.textContent = 'Color: ';
+        // const cartTextDescriptionSpan2 = document.createElement('span');
+        // cartTextDescriptionSpan2.classList.add('text_description_result');
+        // cartTextDescriptionSpan2.textContent = 'Black';
+        // cartTextDescriptionP2.appendChild(cartTextDescriptionSpan2);
+        //
+        //
+        // const cartTextDescriptionP3 = document.createElement('p');
+        // cartTextDescriptionP3.textContent = 'Size: ';
+        // const cartTextDescriptionSpan3 = document.createElement('span');
+        // cartTextDescriptionSpan3.classList.add('text_description_result');
+        // cartTextDescriptionSpan3.textContent = 'XL';
+        // cartTextDescriptionP3.appendChild(cartTextDescriptionSpan3);
+        //
+        // const cartQuantityProduct = document.createElement('div');
+        // cartQuantityProduct.classList.add('quantity_product');
+        //
+        // const cartQuantityP = document.createElement('p');
+        // cartQuantityP.textContent = 'Quantity: ';
+        // cartQuantityProduct.appendChild(cartQuantityP);
+        // const cartQuantityCount = document.createElement('div');
+        //
+        // cartQuantityCount.classList.add('quantity_count');
+        // const cartQuantityCountP = document.createElement('p');
+        // cartQuantityCountP.classList.add('count_product');
+        // cartQuantityCount.textContent = cartSelectProduct.at(-1).countProduct;
+        // cartQuantityCount.appendChild(cartQuantityCountP);
+        // cartQuantityProduct.appendChild(cartQuantityCount);
+        //
+        //
+        // cartTextDescription.appendChild(cartTextDescriptionP1);
+        // cartTextDescription.appendChild(cartTextDescriptionP2);
+        // cartTextDescription.appendChild(cartTextDescriptionP3);
+        // cartTextDescription.appendChild(cartQuantityProduct);
+//================================================================
+
+        // });
+        // const oldCartQuantity = document.querySelectorAll('.cart_product');
+        // oldCartQuantity.replaceChildren(...this);
 
         cartSelectProduct.forEach(({pathImgItem, textTitle, textDescription, priceItem, countProduct}) => {
 
@@ -208,7 +304,6 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
             cartProductTitleXClosed.appendChild(cartxGlosedX);
 
 
-
             const cartTextDescription = document.createElement('div');
             cartTextDescription.classList.add('text_description');
             cartProductDescription.appendChild(cartTextDescription);
@@ -253,14 +348,13 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
             cartQuantityCount.appendChild(cartQuantityCountP);
             cartQuantityProduct.appendChild(cartQuantityCount);
 
-
             cartTextDescription.appendChild(cartTextDescriptionP1);
             cartTextDescription.appendChild(cartTextDescriptionP2);
             cartTextDescription.appendChild(cartTextDescriptionP3);
             cartTextDescription.appendChild(cartQuantityProduct);
-
-
         });
+
+
     });
 
 });
@@ -274,5 +368,12 @@ counterProductInCart.style.left = '90%';
 counterProductInCart.style.transform = 'translate(-50%, -50%)';
 
 
-
+const counterMy = document.querySelectorAll('.cart_product_1');
+// counterMy.forEach((target) => {
+//     const x = target.querySelector('.x_glosed');
+//     x.addEventListener('click', () =>{
+//
+//     })
+// })
+console.log()
 
