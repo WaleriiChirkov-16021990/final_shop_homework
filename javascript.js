@@ -140,6 +140,7 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
                      countElem = element.countProduct += 1;
                     flag = false;
                     // cartSelectProduct.splice(index, 1);
+
                     windowProduct.removeChild(item);
                     cartSelectProduct.push({
                         "pathImgItem": pathImgItem,
