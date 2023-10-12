@@ -16,6 +16,7 @@ const optionsHeightBackground = document.querySelector('.options_height_backgrou
 const cartItem = document.createElement('div');
 cartItem.classList.add('cart_items');
 cartItem.style.marginBottom = '96px'; // margin
+const porDiv = document.createElement('div');
 const por = document.createElement('p');
 const cartProducts = document.createElement('div');
 cartProducts.classList.add('cart_products');
@@ -25,11 +26,16 @@ por.style.color = '#222';
 por.style.fontSize = '30px';
 por.style.fontWeight = '400';
 por.style.marginBottom = '64px'; // margin
-cartItem.appendChild(por);
-// cartProducts.style.display = 'inline-block';
+porDiv.appendChild(por);
+porDiv.style.display = 'flex';
+porDiv.style.justifyContent = 'center';
+cartItem.appendChild(porDiv);
+
+// optionsHeightBackground.style.marginBottom = '96px'; // margin
 optionsHeightBackground.insertAdjacentElement("afterend", cartItem);
 cartItem.appendChild(cartProducts);
 cartItem.style.display = 'none';
+// porDiv.style.display = 'none';
 
 
 const cartProductShow = document.createElement('div');
@@ -41,7 +47,7 @@ const windowProduct = document.createElement('figure');
 windowProduct.classList.add('cart_product');
 windowProduct.classList.add('window_product');
 cartProductShow.appendChild(windowProduct);
-console.log(cartSelectProduct);
+// console.log(cartSelectProduct);
 
 
 localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
@@ -133,23 +139,13 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
     maskFromHowerMouse.addEventListener('click', function () {
         let flag = true;
         if (cartSelectProduct.length > 0) {
-            // optionsHeightBackground.style.marginBottom = '96px';
-            cartSelectProduct.forEach((element,index) => {
+            cartSelectProduct.forEach((element, index) => {
                 let countElem;
                 if (element.pathImgItem === pathImgItem) {
-                     countElem = element.countProduct += 1;
+                    countElem = element.countProduct += 1;
                     flag = false;
-                    // cartSelectProduct.splice(index, 1);
-
-                    windowProduct.removeChild(item);
-                    cartSelectProduct.push({
-                        "pathImgItem": pathImgItem,
-                        "textTitle": textTitle,
-                        "textDescription": textDescription,
-                        "priceItem": priceItem,
-                        "countProduct": countElem,
-                    });
                 }
+
             });
         }
         if (flag) {
@@ -160,15 +156,16 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
                 "priceItem": priceItem,
                 "countProduct": 1,
             });
-
         }
+
+        optionsHeightBackground.style.marginBottom = '96px';
 
         counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ ";
         cartItem.style.display = 'inline-block';
-        // });
-        // cartSelectProduct.at(-1).(({pathImgItem, textTitle, textDescription, priceItem, countProduct}) => {
-//================================================================
-        counterProduct(cartSelectProduct);
+        porDiv.style.display = 'flex';
+
+
+        counterProduct(cartSelectProduct, flag);
 
 
 
@@ -185,12 +182,11 @@ counterProductInCart.style.left = '90%';
 counterProductInCart.style.transform = 'translate(-50%, -50%)';
 
 
-// const counterMy = document.querySelectorAll('.cart_product_1');
-
-// console.log()
-
-const counterProduct = function (cartSelectProduct) {
-    if (cartSelectProduct.length !== 0) {
+const counterProduct = function (cartSelectProduct, flag) {
+    if (cartSelectProduct.length > 0) {
+        if (!flag) {
+            windowProduct.removeChild(windowProduct.lastChild);
+        }
         const lastElements = cartSelectProduct.at(cartSelectProduct.length - 1);
 
         const cartProduct1 = document.createElement('div');
@@ -284,18 +280,26 @@ const counterProduct = function (cartSelectProduct) {
         cartTextDescription.appendChild(cartTextDescriptionP2);
         cartTextDescription.appendChild(cartTextDescriptionP3);
         cartTextDescription.appendChild(cartQuantityProduct);
-        cartxGlosedX.addEventListener('click', (target, elements) => {
-            cartSelectProduct.forEach((element, index, array) => {
-                if (element.pathImgItem === lastElements.pathImgItem) {
-                    cartSelectProduct.splice(index, 1);
-                    counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ ";
-                    windowProduct.removeChild(cartProduct1);
 
-                }
-            });
+        cartxGlosedX.addEventListener('click', () => {
+            if (cartSelectProduct.length > 1) {
+                cartSelectProduct.forEach((element, index) => {
+                    if (element.pathImgItem === lastElements.pathImgItem) {
+                        cartSelectProduct.splice(index, 1);
+                        counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ "; // для счетчика на иконке корзины
+                        windowProduct.removeChild(cartProduct1);
+                    }
+                });
+            } else {
+                cartSelectProduct.splice(0, 1);
+                counterProductInCart.textContent = " _" + cartSelectProduct.length + "_ "; // для счетчика на иконке корзины
+                windowProduct.removeChild(cartProduct1);
+                cartItem.style.display = "none";
+                optionsHeightBackground.style.marginBottom = '0px';
+            }
         });
-    } else {
-        cartItem.style.display = 'none';
+
+
     }
 }
 
