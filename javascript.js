@@ -31,12 +31,9 @@ porDiv.style.display = 'flex';
 porDiv.style.justifyContent = 'center';
 cartItem.appendChild(porDiv);
 
-// optionsHeightBackground.style.marginBottom = '96px'; // margin
 optionsHeightBackground.insertAdjacentElement("afterend", cartItem);
 cartItem.appendChild(cartProducts);
 cartItem.style.display = 'none';
-// porDiv.style.display = 'none';
-
 
 const cartProductShow = document.createElement('div');
 cartProductShow.classList.add('center');
@@ -47,8 +44,6 @@ const windowProduct = document.createElement('figure');
 windowProduct.classList.add('cart_product');
 windowProduct.classList.add('window_product');
 cartProductShow.appendChild(windowProduct);
-// console.log(cartSelectProduct);
-
 
 localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
     lowGridContent.style.display = 'grid';
@@ -66,7 +61,6 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
     item.style.maxWidth = '360px';
     item.style.width = '100%';
 
-
     lowItemTextBox.style.backgroundColor = '#f8f8f8';
     lowItemTextBox.style.display = 'flex';
     lowItemTextBox.style.alignItems = 'flex-start';
@@ -75,7 +69,6 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
     lowItemTextBox.style.padding = '24px 16px';
     lowItemTextBox.style.gap = '16px';
     lowItemTextBox.style.width = '100%';
-
 
     item.classList.add('item');
     imageItem.classList.add('img');
@@ -164,11 +157,7 @@ localItem.forEach(({pathImgItem, textTitle, textDescription, priceItem}) => {
         cartItem.style.display = 'inline-block';
         porDiv.style.display = 'flex';
 
-
         counterProduct(cartSelectProduct, flag);
-
-
-
     });
 
 });
@@ -224,13 +213,11 @@ const counterProduct = function (cartSelectProduct, flag) {
         cartProductTitleXClosed.classList.add('x_glosed');
         cartProductTitleDescription.appendChild(cartProductTitleXClosed);
 
-
         const cartxGlosedX = document.createElement('img');
         cartxGlosedX.classList.add('x_glosed_X');
         cartxGlosedX.setAttribute('src', 'img/mask/closed.svg');
         cartxGlosedX.setAttribute('alt', 'img/mask/closed.svg__icon_X');
         cartProductTitleXClosed.appendChild(cartxGlosedX);
-
 
         const cartTextDescription = document.createElement('div');
         cartTextDescription.classList.add('text_description');
@@ -298,8 +285,6 @@ const counterProduct = function (cartSelectProduct, flag) {
                 optionsHeightBackground.style.marginBottom = '0px';
             }
         });
-
-
     }
 }
 
